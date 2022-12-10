@@ -5,26 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="css/style.css">
     <script src="./js/script.js" defer></script>
 
     <title>animesMMC</title>
 </head>
 <body>
 
+    <datalist id="optQualidade">
+        <option value="sd"></option>
+        <option value="hd"></option>
+    </datalist>
+
+    <datalist id="optIdAnime">
+        <option value="3"></option>
+        <option value="5"></option>
+    </datalist>
+
+
+
     <main>
-        <section>
+        <section class="SForm">
             <form id="form" method="get">
 
-                <input id="nomeAnime" type="search" placeholder="Nome do Anime Separado por ifén(-)"/>
-                <input id="episodio" type="number" placeholder="Numero do episódio"/>
-                <input id="submit" type="submit">
+                <div class="FDiv">
+
+                    <input id="idAnime" class="input" type="value" list="optIdAnime" value="3"/>
+                    <input id="nomeAnime" class="input" type="search" placeholder="Nome do Anime" autocomplete="on" />
+                    <input id="episodio" class="input" type="number" placeholder="Numero do episódio" value="1" autocomplete="on" />
+                    <input id="qualidade" class="input" type="text" list="optQualidade" value="sd"/>
+                </div>
+
+                <input id="submit" class="submit" type="submit">
 
             </form>
         </section>
 
-        <section>
+        <section class="Svideo">
 
-            <video width="600px" height="400px" src="#" controls></video>
+            <video id="video" width="600px" height="400px" src="#" controls></video>
 
         </section>
     </main>
